@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products - SmarkTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <header>
+    <div class="header-top-row"> <h1><a href="index.html" style="color: white; text-decoration: none;">Our Awesome Tech Store</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+    <div class="search-bar"> <input type="text" placeholder="Search products..." class="search-input">
+        <button class="search-button">Search</button>
+    </div>
+ </header>
+    <main>
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Shop</li>
+            </ol>
+        </nav>
+        <div class="shop-container">
+            <aside class="shop-sidebar">
+                <h3>Filters</h3>
+
+                <div class="filter-group" id="category-filter-group">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><label><input type="checkbox" value="printers"> Printers</label></li>
+                        <li><label><input type="checkbox" value="keyboards"> Keyboards</label></li>
+                        <li><label><input type="checkbox" value="monitors"> Monitors</label></li>
+                        <li><label><input type="checkbox" value="mouse"> Mouse</label></li>
+                        <li><label><input type="checkbox" value="laptops"> Laptops</label></li>
+                        <li><label><input type="checkbox" value="desktops"> Desktops</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group" id="price-range-filter-group">
+                    <h4>Price Range</h4>
+                    <input type="range" id="price-range" min="0" max="200000" value="200000">
+                    <p>Price: KSH<span id="current-price-display">200000</span></p>
+                </div>
+
+                <div class="filter-group" id="brand-filter-group">
+                    <h4>Brands</h4>
+                    <ul>
+                        <li><label><input type="checkbox" value="brand-a"> Brand A</label></li>
+                        <li><label><input type="checkbox" value="brand-b"> Brand B</label></li>
+                        <li><label><input type="checkbox" value="brand-c"> Brand C</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section id="product-listing">
+                <div class="product-sort-controls">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by">
+                        <option value="default">Default</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name-asc">Name: A-Z</option>
+                        <option value="name-desc">Name: Z-A</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="product-grid">
+                    <div class="product-item" data-category="printers" data-brand="brand-a" data-product-id="product001">
+                        <a href="product.html?id=product001">
+                            <img src="https://via.placeholder.com/300x200?text=HP+LaserJet" alt="HP LaserJet Printer">
+                            <h3>HP LaserJet Printer</h3>
+                            <p>Fast monochrome laser printer for home or office use.</p>
+                            <span class="product-price-display">KSH 19900.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="laptops" data-brand="brand-b" data-product-id="product013">
+                        <a href="product.html?id=product013">
+                            <img src="images/IMG-20250623-WA0006.jpg" alt="HP Pavilion Laptop">
+                            <h3>HP Pavilion Laptop</h3>
+                            <p>High performance laptop</p>
+                            <span class="product-price-display">KSH 75000.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="keyboards" data-brand="brand-c" data-product-id="product003">
+                        <a href="product.html?id=product003">
+                            <img src="https://via.placeholder.com/300x200?text=Mechanical+Keyboard" alt="Logitech Mechanical Keyboard">
+                            <h3>Logitech Mechanical Keyboard</h3>
+                            <p>RGB backlit, tactile switches for an immersive experience.</p>
+                            <span class="product-price-display">KSH 8500.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="keyboards" data-brand="brand-a" data-product-id="product004">
+                        <a href="product.html?id=product004">
+                            <img src="https://via.placeholder.com/300x200?text=Wireless+Keyboard" alt="Logitech Wireless Keyboard">
+                            <h3>Logitech Wireless Keyboard</h3>
+                            <p>Slim, quiet, and reliable wireless keyboard for productivity.</p>
+                            <span class="product-price-display">KSH 6200.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="monitors" data-brand="brand-b" data-product-id="product005">
+                        <a href="product.html?id=product005">
+                            <img src="https://via.placeholder.com/300x200?text=27-inch+4K+Monitor" alt="Dell 27-inch 4K Monitor">
+                            <h3>Dell UltraSharp Monitor</h3>
+                            <p>Stunning visuals and clarity for professional use.</p>
+                           <span class="product-price-display">KSH 45000.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="monitors" data-brand="brand-c" data-product-id="product006">
+                        <a href="product.html?id=product006">
+                            <img src="https://via.placeholder.com/300x200?text=Gaming+Monitor" alt="Samsung Gaming Monitor">
+                            <h3>Samsung Gaming Monitor</h3>
+                            <p>High refresh rate for smooth gaming performance.</p>
+                            <span class="product-price-display">KSH 78000.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="mouse" data-brand="brand-a" data-product-id="product007">
+                        <a href="product.html?id=product007">
+                            <img src="https://via.placeholder.com/300x200?text=Wireless+Gaming+Mouse" alt="Razer Wireless Gaming Mouse">
+                            <h3>Razer Wireless Gaming Mouse</h3>
+                            <p>Ultra-lightweight gaming mouse with high precision sensor.</p>
+                           <span class="product-price-display">KSH 9800.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+
+                    <div class="product-item" data-category="mouse" data-brand="brand-b" data-product-id="product008">
+                        <a href="product.html?id=product008">
+                            <img src="https://via.placeholder.com/300x200?text=Ergonomic+Mouse" alt="Dell Ergonomic Mouse">
+                            <h3>Dell Ergonomic Mouse</h3>
+                            <p>Comfortable and precise mouse for everyday office use.</p>
+                            <span class="product-price-display">KSH 3200.00</span>
+                        </a>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+     <div class="footer-container">
+        <div class="footer-section about">
+            <h3>SmarkTech</h3>
+            <p>Your trusted source for high-quality desktop computers, laptops, keyboards, mice, monitors, and printers. Built for performance, designed for you.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section categories">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="keyboards.html">Keyboards</a></li>
+                <li><a href="mouse.html">Mouse</a></li>
+                <li><a href="monitors.html">Monitors</a></li>
+                <li><a href="printers.html">Printers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact-info-footer">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:info@smarktech.com">info@smarktech.com</a></p>
+            <p><i class="fas fa-phone"></i> +254 748950126</p>
+        </div>
+     </div>
+        <div class="footer-bottom">
+        <p>&copy; 2025 SmarkTech. All rights reserved.</p>
+      </div>
+    </footer>
+<script src="js/script.js"></script>
+</body>
+</html>
